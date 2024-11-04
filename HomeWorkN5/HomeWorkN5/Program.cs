@@ -2,42 +2,35 @@
 {
     internal class Program
     {
-        static void Main()
-
+        static void Main(string[] args)
         {
-            Console.WriteLine("write a whole number");
-            string[] input = Console.ReadLine().Split(' ');
-            int[] array = Array.ConvertAll(input, int.Parse);
+            int elements = int.Parse(Console.ReadLine());
+            int[] array = new int[elements];
 
+            Console.WriteLine($"Enter {elements} numbers:");
+            for (int i = 0; i < array.Length; i++)
+            {
+                array[i] = int.Parse(Console.ReadLine());
+            }
 
-            Console.WriteLine("write an index");
+            Console.WriteLine("Enter the index to sum digits of that element:");
             int index = int.Parse(Console.ReadLine());
 
-
-            int result = Sum(array, index);
-            Console.WriteLine($"sum of numbers for index {index}: {result}");
+            int result = SumOfNumbers(array, index);
+            Console.WriteLine($"Sum of digits: {result}");
         }
 
-        static int Sum(int[] array, int index)
+        static int SumOfNumbers(int[] array, int index)
         {
-            if (index < 0 || index >= array.Length)
+            int number = 0;
+            string mystr = array[index].ToString();
+
+            foreach (char i in mystr)
             {
-                Console.WriteLine("Index");
-                return 0;
+                number += int.Parse(i.ToString());
             }
 
-            int number = array[index];
-            int sum = 0;
-
-            while (number != 0)
-            {
-                sum += number % 10;
-                number /= 10;
-            }
-
-            return sum;
+            return number;
         }
     }
-
-
 }
