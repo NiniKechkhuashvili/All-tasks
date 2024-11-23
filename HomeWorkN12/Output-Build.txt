@@ -1,0 +1,6 @@
+﻿Build started at 11:30 PM...
+1>------ Build started: Project: HomeWorkN12, Configuration: Debug Any CPU ------
+1>Skipping analyzers to speed up the build. You can execute 'Build' or 'Rebuild' command to run analyzers.
+1>HomeWorkN12 -> C:\Users\nkechkhuashvili\source\repos\All Tasks\HomeWorkN12\HomeWorkN12\bin\Debug\net8.0\HomeWorkN12.dll
+========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
+========== Build completed at 11:30 PM and took 06.306 seconds ==========
